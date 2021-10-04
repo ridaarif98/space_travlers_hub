@@ -21,7 +21,7 @@ function App() {
           <MyProfile />
         </Route>
       </Switch>
-      </Provider>
+    </Provider>
   );
 }
 

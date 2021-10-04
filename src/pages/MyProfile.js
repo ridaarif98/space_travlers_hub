@@ -1,5 +1,5 @@
 import React from 'react';
-//import MyMissions from '../components/MyMissions';
+//  import MyMissions from '../components/MyMissions';
 import MyRockets from '../components/MyRockets';
 
 const MyProfile = () => (

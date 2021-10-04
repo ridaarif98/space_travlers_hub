@@ -18,11 +18,13 @@ function MyRockets() {
         <ul>
           {rockets.map((rocket) => (
             <li key={rocket.id}>
-              <div class="img-rocket">
+              <div className="img-rocket">
                 <img src={rocket.flickr_images} alt="rcoket" />
               </div>
               <div className="rocket-detail">
-                <h2> {rocket.rocket_name}</h2>
+                <h2>
+                  {rocket.rocket_name}
+                </h2>
                 <p>{rocket.description}</p>
                 <button type="button" id={rocket.id}>
                   Reserve Rocket
