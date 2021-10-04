@@ -1,8 +1,8 @@
-.rocket-div ul  {
+.rocket-div ul {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-   padding: 10px 25px;
+  padding: 10px 25px;
 }
 
 .rocket-div ul li {
@@ -30,9 +30,9 @@
 }
 
 .rocket-detail h2 {
-   padding-top: 0;
-   margin: 0;
-   font-weight: 600;
+  padding-top: 0;
+  margin: 0;
+  font-weight: 600;
 }
 
 .rocket-detail p {

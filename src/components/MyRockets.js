@@ -1,4 +1,4 @@
-import React,  { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadRockets } from '../redux/rockets/rockets';
 import '../stylesheets/rockets.css';
@@ -8,8 +8,8 @@ function MyRockets() {
   const rockets = useSelector((state) => state.rocketsReducer);
 
   useEffect(() => {
-      dispatch(loadRockets);
-  },[]);
+    dispatch(loadRockets);
+  }, []);
 
   return (
     <div className="my-rockets">
@@ -18,14 +18,16 @@ function MyRockets() {
         <ul>
           {rockets.map((rocket) => (
             <li key={rocket.id}>
-            <div class="img-rocket">
-            <img src={rocket.flickr_images} alt="rcoket"/>
-            </div>
-            <div className="rocket-detail">
-             <h2> {rocket.rocket_name}</h2> 
-             <p>{rocket.description}</p>
-             <button type="button" id={rocket.id}>Reserve Rocket</button>
-             </div>
+              <div class="img-rocket">
+                <img src={rocket.flickr_images} alt="rcoket" />
+              </div>
+              <div className="rocket-detail">
+                <h2> {rocket.rocket_name}</h2>
+                <p>{rocket.description}</p>
+                <button type="button" id={rocket.id}>
+                  Reserve Rocket
+                </button>
+              </div>
             </li>
           ))}
         </ul>
