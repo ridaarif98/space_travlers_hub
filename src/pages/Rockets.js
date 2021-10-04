@@ -1,5 +1,6 @@
 import React from 'react';
+import MyRockets from '../components/MyRockets';
 
-const Rocket = () => <h1>Hello, This is rocket page</h1>;
+const Rocket = () => <MyRockets />;
 
 export default Rocket;

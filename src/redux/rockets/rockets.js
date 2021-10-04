@@ -2,11 +2,11 @@
 const FETCH_ROCKETS = 'space_travlers_hub/rockets/FETCH_ROCKETS';
 const initialState = [];
 
-const rocket_api = 'https://api.spacexdata.com/v3/rockets';
+//const rocket_api = 'https://api.spacexdata.com/v3/rockets';
 
 export const loadRockets = async (dispatch) => {
-  const rocketGet = await fetch(rocket_api);
-  const rocketList = rocketGet.json();
+  const rocketGet = await fetch('https://api.spacexdata.com/v3/rockets');
+  const rocketList =await rocketGet.json();
   const rocketsData = [];
   rocketList.map((rocket) => rocketsData.push({
     id: rocket.id,
