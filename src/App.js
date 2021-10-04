@@ -1,8 +1,8 @@
 import { Route, Switch } from 'react-router-dom';
-import Rocket from './components/rockets';
-import Mission from './components/missions';
-import MyProfile from './components/myProfile';
-import Navbar from './components/navBar';
+import Rocket from './pages/Rockets';
+import Mission from './pages/Missions';
+import MyProfile from './pages/MyProfile';
+import Navbar from './pages/NavBar';
 
 function App() {
   return (

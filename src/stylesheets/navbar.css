@@ -1,6 +1,10 @@
 nav {
   display: flex;
   flex-direction: row;
+  border-bottom: 1px solid black;
+  margin: 0 0 1rem;
+  box-shadow: 0px 0.3px 4px gray;
+  padding: 0 0.5rem;
 }
 
 nav ul {
@@ -11,4 +15,24 @@ nav ul {
 
 nav ul li {
   padding: 5px 10px;
+}
+
+.div {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  height: 400px;
+}
+
+.profile {
+  display: flex;
+  gap: 1rem;
+  margin: 0 4rem;
+}
+
+.my-missions {
+  flex: 1;
+}
+
+.my-rockets {
+  flex: 1;
 }
