@@ -1,0 +1,54 @@
+.rocket-div ul  {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+   padding: 10px 25px;
+}
+
+.rocket-div ul li {
+  display: flex;
+  flex-direction: row;
+  height: 190px;
+  padding: 5px;
+}
+
+.img-rocket {
+  padding: 10px 10px 10px 25px;
+}
+
+.img-rocket img {
+  height: 170px;
+  width: 190px;
+  border-radius: 10px;
+}
+
+.rocket-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: left;
+}
+
+.rocket-detail h2 {
+   padding-top: 0;
+   margin: 0;
+   font-weight: 600;
+}
+
+.rocket-detail p {
+  font-size: 17px;
+  padding-right: 20px;
+  font-weight: 400;
+}
+
+.rocket-detail button {
+  width: 150px;
+  border-radius: 5px;
+  padding: 10px 5px;
+  font-size: 17px;
+  font-weight: 400;
+  border: none;
+  background-color: #0290ff;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
