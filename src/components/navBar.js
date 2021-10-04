@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/navbar.css';
 
-function Navbar() {
+const Navbar=() => {
   const links = [
     {
       id: 1,
@@ -24,15 +24,9 @@ function Navbar() {
     <nav>
       <h1> Space Travlers Hub</h1>
       <ul>
-        {links.map((link) => {
-          return (
-            <li key={link.id}>
-              <Link to={link.path}>{link.text}</Link>
-            </li>
-          );
-        })}
+        {links.map((link) => (<li key={link.id}><Link to={link.path}>{link.text}</Link></li>))}
       </ul>
     </nav>
   );
-}
+};
 export default Navbar;
