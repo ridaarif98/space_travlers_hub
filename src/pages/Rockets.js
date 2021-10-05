@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadRockets } from '../redux/rockets/rockets';
+import { loadRockets, reserveRocket, cancelRocketReservation } from '../redux/rockets/rockets';
 import '../stylesheets/rockets.css';
 
 const Rocket = () => {
@@ -24,9 +24,16 @@ const Rocket = () => {
               <div className="rocket-detail">
                 <h2>{rocket.rocket_name}</h2>
                 <p>{rocket.description}</p>
+              
+                {rocket.reserverd?
                 <button type="button" id={rocket.id}>
-                  Reserve Rocket
-                </button>
+                Cancel Reservation
+                </button>:
+                <button type="button" id={rocket.id}>
+                Reserve Rocket
+              </button>
+              }
+  
               </div>
             </li>
           ))}
