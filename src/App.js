@@ -10,19 +10,18 @@ function App() {
   return (
     <Provider store={store}>
       <Navbar />
-      <Provider store={store}>
-        <Switch>
-          <Route exact path="/">
-            <Rocket />
-          </Route>
-          <Route path="/mission">
-            <Mission />
-          </Route>
-          <Route path="/myprofile">
-            <MyProfile />
-          </Route>
-        </Switch>
-      </Provider>
+      <Switch>
+        <Route exact path="/">
+          <Rocket />
+        </Route>
+        <Route path="/mission">
+          <Mission />
+        </Route>
+        <Route path="/myprofile">
+          <MyProfile />
+        </Route>
+      </Switch>
+    </Provider>
   );
 }
 
