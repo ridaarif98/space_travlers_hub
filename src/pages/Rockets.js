@@ -26,10 +26,10 @@ const Rocket = () => {
                 <p>{rocket.description}</p>
               
                 {rocket.reserverd?
-                <button type="button" id={rocket.id}>
+                <button type="button" id={rocket.id} >
                 Cancel Reservation
                 </button>:
-                <button type="button" id={rocket.id}>
+                <button type="button" id={rocket.id} onClick= {() => dispatch(reserveRocket(rocket.id))}>
                 Reserve Rocket
               </button>
               }
