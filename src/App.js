@@ -8,7 +8,7 @@ import store from './redux/configureStore';
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Navbar />
       <Provider store={store}>
         <Switch>
@@ -23,7 +23,6 @@ function App() {
           </Route>
         </Switch>
       </Provider>
-    </>
   );
 }
 
