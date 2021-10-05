@@ -1,6 +1,6 @@
 const FETCH_ROCKETS = 'space_travlers_hub/rockets/FETCH_ROCKETS';
 const RESERVE_ROCKET = 'space_travlers_hub/rockets/RESERVE_ROCKET';
-const CANCEL_ROCET = 'space_travlers_hub/rockets/CANCEL_ROCET';
+const CANCEL_RESERVATION = 'space_travlers_hub/rockets/CANCEL_RESERVATION';
 
 const initialState = [];
 
@@ -26,7 +26,7 @@ export const reserveRocket = (id) => ({
 });
 
 export const cancelRocketReservation = (id) => ({
-  type:CANCEL_ROCET,
+  type: CANCEL_RESERVATION,
   id
 });
 
@@ -39,10 +39,10 @@ const rocketsReducer = (state = initialState, action) => {
       return state.map(rocket => {
         if(rocket.id !== action.id )
           return rocket;
-        return {...rocket, reserverd: true};
+        return {...rocket, reserved: true};
       });
     
-    case CANCEL_ROCET:
+    case CANCEL_RESERVATION:
       return state.map(rocket => {
         if(rocket.id !== action.id)
           return rocket;
