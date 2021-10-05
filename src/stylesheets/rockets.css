@@ -41,7 +41,18 @@
   font-weight: 400;
 }
 
-.rocket-detail button {
+.rocket-detail .cancelBtn {
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px 5px;
+  font-size: 17px;
+  font-weight: 400;
+  background-color: transparent;
+  border: 1px solid black;
+  box-shadow: 5px 6px rgb(231, 230, 230);
+}
+
+.rocket-detail .reserveBtn {
   width: 150px;
   border-radius: 5px;
   padding: 10px 5px;

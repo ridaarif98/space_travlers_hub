@@ -13,7 +13,6 @@ const Rocket = () => {
 
   return (
     <div className="my-rockets">
-      <h2>My Rockets</h2>
       <div className="rocket-div">
         <ul>
           {rockets.map((rocket) => (
@@ -27,11 +26,11 @@ const Rocket = () => {
               
                 {rocket.reserved
                 ?
-                <button type="button" id={rocket.id} onClick= {() => dispatch(cancelRocketReservation(rocket.id))}>
+                <button type="button" className="cancelBtn" id={rocket.id} onClick= {() => dispatch(cancelRocketReservation(rocket.id))}>
                 Cancel Reservation
                 </button>
                 :
-                <button type="button" id={rocket.id} onClick= {() => dispatch(reserveRocket(rocket.id))}>
+                <button type="button" className="reserveBtn" id={rocket.id} onClick= {() => dispatch(reserveRocket(rocket.id))}>
                 Reserve Rocket
               </button>
               }
