@@ -36,7 +36,11 @@
 }
 
 .rocket-detail p {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
   font-size: 17px;
+  line-height: 20px;
   padding-right: 20px;
   font-weight: 400;
 }
@@ -62,4 +66,16 @@
   background-color: #0290ff;
   color: #fff;
   letter-spacing: 0.5px;
+}
+
+.reserved {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin: 1px;
+  font-size: 12px;
+  background-color: #0290ff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
 }
