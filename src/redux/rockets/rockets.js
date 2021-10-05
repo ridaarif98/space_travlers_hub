@@ -3,7 +3,7 @@ const initialState = [];
 const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
     case action.type:
-      return action.payload;
+      return 'state';
     default:
       return state;
   }
