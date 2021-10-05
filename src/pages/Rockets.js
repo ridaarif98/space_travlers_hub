@@ -28,11 +28,10 @@ const Rocket = () => {
                 <h2>{rocket.rocket_name}</h2>
                 <p>
                   {rocket.reserved ? (
-                    <span className="reserved">Reserved</span>
+                    <span className="badge badge-primary">Reserved</span>
                   ) : (
                     ''
                   )}
-
                   {rocket.description}
                 </p>
 
