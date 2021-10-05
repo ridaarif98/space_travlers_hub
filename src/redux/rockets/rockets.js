@@ -1,4 +1,6 @@
 const FETCH_ROCKETS = 'space_travlers_hub/rockets/FETCH_ROCKETS';
+const RESERVE_ROCKET = 'space_travlers_hub/rockets/FETCH_ROCKETS';
+
 const initialState = [];
 
 export const loadRockets = async (dispatch) => {
@@ -17,10 +19,21 @@ export const loadRockets = async (dispatch) => {
   });
 };
 
+export const reserveRocket = (id) => ({
+  type: RESERVE_ROCKET,
+  id
+});
+
 const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ROCKETS:
       return [...action.payload];
+    case RESERVE_ROCKET:
+      return state.map(rocket => {
+        if(rocket.id !== action.id )
+          return rocket;
+        return{...rocket, reserverd:true};
+      });
     default:
       return state;
   }
