@@ -16,13 +16,13 @@ function App() {
       <Missions />
       <RocketRender />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/space_travlers_hub/">
           <Rocket />
         </Route>
-        <Route path="/missions">
+        <Route path="/space_travlers_hub/missions">
           <MissionList />
         </Route>
-        <Route path="/myprofile">
+        <Route path="/space_travlers_hub/myprofile">
           <MyProfile />
         </Route>
       </Switch>

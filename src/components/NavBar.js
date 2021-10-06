@@ -7,17 +7,17 @@ const Navbar = () => {
   const links = [
     {
       id: 1,
-      path: '/',
+      path: '/space_travlers_hub/',
       text: 'Rockets',
     },
     {
       id: 2,
-      path: '/missions',
+      path: '/space_travlers_hub/missions',
       text: 'Mission',
     },
     {
       id: 3,
-      path: '/myprofile',
+      path: '/space_travlers_hub/myprofile',
       text: 'MyProfile',
     },
   ];
@@ -30,7 +30,7 @@ const Navbar = () => {
       <ul className="">
         {links.map((link) => (
           <li className="nav-item" key={link.id}>
-            <Link className="nav-link" to={link.path}>
+            <Link className="link-active" to={link.path}>
               {link.text}
             </Link>
           </li>

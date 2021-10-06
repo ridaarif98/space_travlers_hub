@@ -45,3 +45,18 @@ nav ul li {
 .bckg {
   background-color: rgba(0, 0, 0, 0.2);
 }
+
+.link-active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-active:hover {
+  color: rgb(42, 106, 165);
+  text-decoration: underline;
+}
+
+.link-active:active {
+  color: rgb(42, 106, 165);
+  text-decoration: underline;
+}
