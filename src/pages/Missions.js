@@ -1,6 +1,10 @@
 import { React, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchData, joinMissionAction } from '../redux/missions/missions';
+import {
+  fetchData,
+  joinMission,
+  leaveMission,
+} from '../redux/missions/missions';
 
 const Mission = () => {
   const data = useSelector((state) => state.missionsReducer);
@@ -9,8 +13,12 @@ const Mission = () => {
     dispatch(fetchData());
   }, []);
   const missions = Object.values(data);
-  const joinMission = (id) => {
-    dispatch(joinMissionAction(id));
+  const handelMission = (mission) => {
+    if (mission.joined) {
+      dispatch(leaveMission(mission.mission_id));
+    } else {
+      dispatch(joinMission(mission.mission_id));
+    }
   };
   const classes = (joined) => {
     let classes = 'btn btn-block btn-outline-';
@@ -32,6 +40,12 @@ const Mission = () => {
         <tbody>
           {missions.map((mission) => {
             const stringd = classes(mission.joined);
+            let memberStatus;
+            if (mission.joined) {
+              memberStatus = 'Leave mission';
+            } else {
+              memberStatus = 'Join mission';
+            }
             return (
               <tr key={mission.mission_id} className="pb-5">
                 <td>{mission.mission_name}</td>
@@ -43,9 +57,9 @@ const Mission = () => {
                   <button
                     type="button"
                     className={stringd}
-                    onClick={() => joinMission(mission.mission_id)}
+                    onClick={() => handelMission(mission)}
                   >
-                    Join Mission
+                    {memberStatus}
                   </button>
                 </td>
               </tr>
