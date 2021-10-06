@@ -1,5 +1,4 @@
 import React from 'react';
-import Table from 'react-bootstrap/Table';
 import { useSelector } from 'react-redux';
 
 function MyMissions() {

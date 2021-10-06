@@ -1,28 +1,22 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Table from 'react-bootstrap/Table';
-import '../stylesheets/myProfile.css';
 
 function MyRockets() {
   const rockets = useSelector((state) => state.rocketsReducer);
 
   return (
-    <Table bordered hover size="lg" className="myProfileTable">
-      <thead>
-        <tr>
-          <th>My Rockets</th>
-        </tr>
-      </thead>
-      <tbody>
+    <div className="my-missions">
+      <h2>My Missions</h2>
+      <ul className="div list-group">
         {rockets
           .filter((y) => y.reserved)
           .map((y) => (
-            <tr>
-              <td>{y.rocket_name}</td>
-            </tr>
+            <li key={y.rocket_name} className="list-group-item">
+              {y.rocket_name}
+            </li>
           ))}
-      </tbody>
-    </Table>
+      </ul>
+    </div>
   );
 }
 
