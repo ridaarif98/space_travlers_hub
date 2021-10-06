@@ -20,9 +20,14 @@ const Mission = () => {
       dispatch(joinMission(mission.mission_id));
     }
   };
-  const classes = (joined) => {
+  const btnClass = (joined) => {
     let classes = 'btn btn-block btn-outline-';
     classes += joined ? 'danger' : 'dark';
+    return classes;
+  };
+  const badgeClass = (joined) => {
+    let classes = 'badge bg-';
+    classes += joined ? 'info' : 'secondary';
     return classes;
   };
 
@@ -39,27 +44,31 @@ const Mission = () => {
         </thead>
         <tbody>
           {missions.map((mission) => {
-            const stringd = classes(mission.joined);
+            const btn = btnClass(mission.joined);
+            const bdj = badgeClass(mission.joined);
             let memberStatus;
+            let memberAction;
             if (mission.joined) {
-              memberStatus = 'Leave mission';
+              memberAction = 'Leave mission';
+              memberStatus = 'Active member';
             } else {
-              memberStatus = 'Join mission';
+              memberAction = 'Join mission';
+              memberStatus = 'Not a member';
             }
             return (
               <tr key={mission.mission_id} className="pb-5">
                 <td>{mission.mission_name}</td>
                 <td className="pb-4">{mission.description}</td>
                 <td>
-                  <span className="badge bg-secondary">Not a member</span>
+                  <span className={bdj}>{memberStatus}</span>
                 </td>
                 <td>
                   <button
                     type="button"
-                    className={stringd}
+                    className={btn}
                     onClick={() => handelMission(mission)}
                   >
-                    {memberStatus}
+                    {memberAction}
                   </button>
                 </td>
               </tr>
