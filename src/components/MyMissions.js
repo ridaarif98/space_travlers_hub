@@ -1,13 +1,21 @@
 import React from 'react';
+import Table from 'react-bootstrap/Table';
+import '../stylesheets/myProfile.css';
 
 function MyMissions() {
   return (
-    <div className="my-missions">
-      <h2>My Missions</h2>
-      <div className="div">
-        <p>Missions ...</p>
-      </div>
-    </div>
+    <Table bordered hover size="lg" className="myProfileTable">
+      <thead>
+        <tr>
+          <th>My Missions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Test</td>
+        </tr>
+      </tbody>
+    </Table>
   );
 }
 
