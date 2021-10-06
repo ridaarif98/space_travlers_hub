@@ -1,25 +1,12 @@
-import { React, useEffect } from 'react';
+import { React } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  fetchData,
-  joinMission,
-  leaveMission,
-} from '../redux/missions/missions';
 
-const Mission = () => {
-  const data = useSelector((state) => state.missionsReducer);
+import { joinMission, leaveMission } from '../redux/missions/missions';
+
+const MissionsList = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchData());
-  }, []);
+  const data = useSelector((state) => state.missionsReducer);
   const missions = Object.values(data);
-  const handelMission = (mission) => {
-    if (mission.joined) {
-      dispatch(leaveMission(mission.mission_id));
-    } else {
-      dispatch(joinMission(mission.mission_id));
-    }
-  };
   const btnClass = (joined) => {
     let classes = 'btn btn-block btn-outline-';
     classes += joined ? 'danger' : 'dark';
@@ -31,6 +18,13 @@ const Mission = () => {
     return classes;
   };
 
+  const handelMission = (mission) => {
+    if (mission.joined) {
+      dispatch(leaveMission(mission.mission_id));
+    } else {
+      dispatch(joinMission(mission.mission_id));
+    }
+  };
   return (
     <div className="container">
       <table className="table table-bordered table-striped">
@@ -79,4 +73,5 @@ const Mission = () => {
     </div>
   );
 };
-export default Mission;
+
+export default MissionsList;
