@@ -5,6 +5,9 @@ import App from './App';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+const initialState = [];
+export default initialState;
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
