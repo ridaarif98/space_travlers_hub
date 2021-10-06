@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  loadRockets,
   reserveRocket,
   cancelRocketReservation,
 } from '../redux/rockets/rockets';
@@ -10,10 +9,6 @@ import '../stylesheets/rockets.css';
 const Rocket = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rocketsReducer);
-
-  useEffect(() => {
-    dispatch(loadRockets);
-  }, []);
 
   return (
     <div className="my-rockets">
