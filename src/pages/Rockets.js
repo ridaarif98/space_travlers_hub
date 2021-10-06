@@ -11,10 +11,6 @@ const Rocket = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rocketsReducer);
 
-  useEffect(() => {
-    dispatch(loadRockets);
-  }, []);
-
   return (
     <div className="my-rockets">
       <div className="rocket-div">

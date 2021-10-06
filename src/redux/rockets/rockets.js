@@ -4,7 +4,7 @@ const CANCEL_RESERVATION = 'space_travlers_hub/rockets/CANCEL_RESERVATION';
 
 const initialState = [];
 
-export const loadRockets = async (dispatch) => {
+export const loadRockets = () => async (dispatch) => {
   const rocketGet = await fetch('https://api.spacexdata.com/v3/rockets');
   const rocketList = await rocketGet.json();
   let rocketsData = [];
