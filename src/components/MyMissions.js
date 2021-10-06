@@ -1,21 +1,25 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-import '../stylesheets/myProfile.css';
+import { useSelector } from 'react-redux';
 
 function MyMissions() {
+  const missions = useSelector((state) => state.missionsReducer);
   return (
-    <Table bordered hover size="lg" className="myProfileTable">
-      <thead>
-        <tr>
-          <th>My Missions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Test</td>
-        </tr>
-      </tbody>
-    </Table>
+    <div className="my-missions">
+      <h2>My Missions</h2>
+      <ul className="div list-group">
+        {missions.map((mission) => {
+          if (mission.joined) {
+            return (
+              <li key={mission.mission_name} className="list-group-item">
+                {mission.mission_name}
+              </li>
+            );
+          }
+          return '';
+        })}
+      </ul>
+    </div>
   );
 }
 
