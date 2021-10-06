@@ -5,8 +5,9 @@ import MissionList from './pages/MissionsList';
 import Missions from './components/Missions';
 import RocketRender from './components/RocketsRender';
 import MyProfile from './pages/MyProfile';
-import Navbar from './pages/NavBar';
+import Navbar from './components/NavBar';
 import store from './redux/configureStore';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <MyProfile />
         </Route>
       </Switch>
+      <Footer />
     </Provider>
   );
 }

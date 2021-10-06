@@ -6,7 +6,7 @@ function MyRockets() {
 
   return (
     <div className="my-missions">
-      <h2>My Missions</h2>
+      <h2>My Rockets</h2>
       <ul className="div list-group">
         {rockets
           .filter((y) => y.reserved)
