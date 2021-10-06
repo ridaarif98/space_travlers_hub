@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  loadRockets,
   reserveRocket,
   cancelRocketReservation,
 } from '../redux/rockets/rockets';
