@@ -1,5 +1,5 @@
 const initialState = [];
-
+const JOIN_MISSION = 'spaceTravlers/missions/JOIN_Mission';
 const FETCH_DATA = 'spaceTravlers/missions/FETCH_DATA';
 
 export const fetchData = () => async (dispatch) => {
@@ -9,14 +9,28 @@ export const fetchData = () => async (dispatch) => {
 
   dispatch({
     type: FETCH_DATA,
-    payload: { ...data },
+    payload: [...data],
   });
 };
+
+export const joinMissionAction = (payload) => ({
+  type: JOIN_MISSION,
+  payload,
+});
 
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA:
       return action.payload;
+    case JOIN_MISSION: {
+      const newState = state.map((mission) => {
+        if (mission.mission_id === action.payload) {
+          return { ...mission, joined: true };
+        }
+        return mission;
+      });
+      return newState;
+    }
     default:
       return state;
   }
