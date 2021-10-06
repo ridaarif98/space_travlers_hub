@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/space_travlers_hub/static/css/main.5851622e.chunk.css",
+    "main.js": "/space_travlers_hub/static/js/main.6a677c60.chunk.js",
+    "main.js.map": "/space_travlers_hub/static/js/main.6a677c60.chunk.js.map",
+    "runtime-main.js": "/space_travlers_hub/static/js/runtime-main.85fffaf9.js",
+    "runtime-main.js.map": "/space_travlers_hub/static/js/runtime-main.85fffaf9.js.map",
+    "static/css/2.feda8dcb.chunk.css": "/space_travlers_hub/static/css/2.feda8dcb.chunk.css",
+    "static/js/2.f115fbc5.chunk.js": "/space_travlers_hub/static/js/2.f115fbc5.chunk.js",
+    "static/js/2.f115fbc5.chunk.js.map": "/space_travlers_hub/static/js/2.f115fbc5.chunk.js.map",
+    "index.html": "/space_travlers_hub/index.html",
+    "static/css/2.feda8dcb.chunk.css.map": "/space_travlers_hub/static/css/2.feda8dcb.chunk.css.map",
+    "static/css/main.5851622e.chunk.css.map": "/space_travlers_hub/static/css/main.5851622e.chunk.css.map",
+    "static/js/2.f115fbc5.chunk.js.LICENSE.txt": "/space_travlers_hub/static/js/2.f115fbc5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.85fffaf9.js",
+    "static/css/2.feda8dcb.chunk.css",
+    "static/js/2.f115fbc5.chunk.js",
+    "static/css/main.5851622e.chunk.css",
+    "static/js/main.6a677c60.chunk.js"
+  ]
+}
