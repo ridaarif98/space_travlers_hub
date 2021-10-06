@@ -41,3 +41,7 @@ nav ul li {
 .my-rockets {
   flex: 1;
 }
+
+.bckg {
+  background-color: rgba(0, 0, 0, 0.2);
+}
